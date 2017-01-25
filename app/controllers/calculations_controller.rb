@@ -18,6 +18,13 @@ class CalculationsController < ApplicationController
     render("square_root.html.erb")
   end
 
+  def square_root_form
+    x = params["num"].to_i
+    @val = x
+    @sval = Math.sqrt(x)
+    render("square_root_form.html.erb")
+  end
+
   def random
     @min = params["min"].to_i
     @max = params["max"].to_i
